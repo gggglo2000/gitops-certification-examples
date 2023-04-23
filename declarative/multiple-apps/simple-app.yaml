@@ -11,20 +11,19 @@ spec:
   # The project the application belongs to.
   project: default
 
-  # Source of the application manifests
-  source:
-    repoURL: https://github.com/gggglo2000/gitops-certification-examples.git
+  sources:
+  - repoURL: https://github.com/gggglo2000/gitops-certification-examples.git
     targetRevision: HEAD
-    path: ./helm-app
     helm:
       valueFiles:
         - values.yaml
         - ./values/values-on.yaml
-      dependencies:
-        - name: dependency-1
-          valueFiles:
-            - values.yaml
-            
+  - repoURL: https://github.com/gggglo2000/gitops-certification-examples.git
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+      
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
