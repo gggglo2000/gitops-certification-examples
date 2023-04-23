@@ -14,12 +14,14 @@ spec:
   sources:
   - repoURL: https://github.com/gggglo2000/gitops-certification-examples.git
     targetRevision: HEAD
+    path: simple-app
     helm:
       valueFiles:
         - values.yaml
         - ./values/values-on.yaml
   - repoURL: https://github.com/gggglo2000/gitops-certification-examples.git
     targetRevision: HEAD
+    path: simple-app
     helm:
       valueFiles:
         - values.yaml
