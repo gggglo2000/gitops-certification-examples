@@ -14,7 +14,7 @@ spec:
   sources:
   - repoURL: https://github.com/gggglo2000/gitops-certification-examples.git
     targetRevision: HEAD
-    path: simple-app
+    path: helm-app
     helm:
       valueFiles:
         - values.yaml
