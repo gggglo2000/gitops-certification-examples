@@ -21,7 +21,7 @@ spec:
         - ./values/values-on.yaml
   - repoURL: https://github.com/gggglo2000/gitops-certification-examples.git
     targetRevision: HEAD
-    path: simple-app
+    path: helm-app
     helm:
       valueFiles:
         - values.yaml
@@ -29,7 +29,7 @@ spec:
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
-    namespace: simple-app
+    namespace: helm-app
 
   # Sync policy
   syncPolicy:
